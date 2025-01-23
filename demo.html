@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Layout with Corner Text</title>
+    <style>
+        body {
+            background-color: lightgrey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative; /* Added to position the corner text properly */
+        }
+        .corner-text {
+            position: absolute;
+            font-size: 12px;
+            font-weight: 100;
+            margin: 0;
+            padding: 0;
+        }
+        .body-text {
+            top: 10px;
+            left: 10px;
+        }
+        div {
+            background-color: lightblue;
+            padding: 20px;
+            border: 2px solid blue;
+            position: relative;
+        }
+        .div-text {
+            font-size: 12px;
+            top: -20px;
+            left: 0px;
+        }
+        h1 {
+            background-color: lightcoral;
+            padding: 10px;
+            width: 100px;
+            border: 2px solid red;
+            position: relative;
+            text-align: center;
+            font-size: 10px;
+        }
+        .h1-text {
+            top: -20px;
+            left: 0px;
+        }
+        .new-box {
+            background-color: lightgreen; /* New box color */
+            padding: 20px;
+            border: 2px solid green; /* Border for the new box */
+            margin: 20px; /* Space between the boxes */
+            text-align: center; /* Center text inside new box */
+        }
+    </style>
+</head>
+<body>
+    <p class="corner-text body-text">body</p>
+    <div>
+        <p class="corner-text div-text">div[1]</p>
+        <h1>
+            <p class="corner-text h1-text">h1</p>
+            Orginal XPATH
+        </h1>
+    </div>
+    <!-- New colored box -->
+    <div class="new-box">
+        <p class="corner-text div-text">div[2]</p>
+        Other content that is within the body.
+    </div>
+</body>
+</html>
